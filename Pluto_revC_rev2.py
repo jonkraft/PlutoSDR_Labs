@@ -1,10 +1,3 @@
-
-import sys
-sys.path.append('C:\\Users\\jkraft\\AppData\\Local\\Programs\\Python\\Python37-32\\Lib\\site-packages\\')
-#sys.path.append('C:\\Users\\jkraft\\AppData\\Local\\Programs\\Python\\Python37-32\\Lib\\site-packages\\libiio-0.18\\bindings\\python\\')
-sys.path.append('C:\\Users\\jkraft\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\libiio-0.21\\bindings\\python\\')
-#import iio
-
 """
 modified from https://github.com/analogdevicesinc/pyadi-iio/blob/ensm-example/examples/pluto.py
 
@@ -60,7 +53,7 @@ i1 = np.cos(2 * np.pi * t * fc1) * 2 ** 14
 q1 = np.sin(2 * np.pi * t * fc1) * 2 ** 14
 iq0 = i0 + 1j * q0
 iq1 = i1 + 1j * q1
-sdr.tx([iq0, iq1])   # Send Tx data.  But don't use this if the dds generator is enabled above.  You can only send data with one method, not both!!
+sdr.tx([iq0, iq1])   # Send Tx data.
 
 # Collect data
 for r in range(20):    # grab several buffers to give the AGC time to react (if AGC is set to "slow_attack" instead of "manual")
